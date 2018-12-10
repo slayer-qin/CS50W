@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- <link href="../styles/mycustom.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        <div class="container col-6">
+            <div class="row justify-content-center mt-2 mb-5">
+                <div class="col text-center"><h1>SEARCH BOOK</h1></div>
+            </div>
+            <div class="row justify-content-center">
+                <form method="post" class="col">
+                    <div class="form-group row align-items-center">
+                        <div class="col-2">
+                            <select name="field">
+                                <option value="isbn">ISBN</option>
+                                <option value="title">TITLE</option>
+                                <option value="auther">AUTHER</option>
+                            </select>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" name="text">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default offset-2">搜索</button>
+                </form>
+            </div>
+            {% if info %}
+                <div class="row mt-4">
+                    <div class="col" >
+                        hello {{ info }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
